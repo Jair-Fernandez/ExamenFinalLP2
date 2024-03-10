@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import javax.validation.constraints.Size;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,6 +19,7 @@ public class Libro {
 	@Column(name = "idlibro", nullable = false)
 	public Long idlibro;
 	
+	@Size(min = 4, max = 60)
 	@Column(name = "nombre", nullable = false)
 	public String nombre;
 	
